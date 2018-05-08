@@ -16,11 +16,12 @@
                                      <div class="tg-logingarea">
                                          <h2 class="text-center">Login Now</h2>
                                         <h2 class="text-center">Supplier</h2>
-                                        <form class="tg-formtheme tg-formloging">
+                                        <form class="tg-formtheme tg-formloging" action="/check_login" method="post">
+                                            {{csrf_field()}}
                                             <fieldset>
                                                 <div class="form-group tg-inputwithicon">
                                                     <i class="icon-envelope"></i>
-                                                    <input type="text" name="username" class="form-control" placeholder="Username">
+                                                    <input type="text" name="email" class="form-control" placeholder="Username">
                                                 </div>
                                                 <div class="form-group tg-inputwithicon">
                                                     <i class="icon-lock"></i>
@@ -34,7 +35,7 @@
 <a class="tg-forgetpassword" id="forget_password" href="javascript:void(0);">Forgot Password?</a>
                                                 </div>
                                                 <div class="text-center">
-                                                <button class="tg-btn" type="button">Login</button>
+                                                    <button class="tg-btn" type="submit">Login</button>
                                                 </div>
                                                 <label class="text-center">Or</label>
                                                 <div class="col-md-1 col-lg-1">
@@ -56,7 +57,7 @@
                                                 
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                     <hr>
-                                                    <h4>New Supplier?<a class="tg-register" href="javascript:void(0);"> Click here to register</a></h4>
+                                                    <h4>New Supplier?<a class="tg-register" href="/register"> Click here to register</a></h4>
                                                 </div>
                                                 
                                             </fieldset>

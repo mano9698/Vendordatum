@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('frontend/contents/login');
 });
+
+Route::get('/register', 'UI\HomeController@show_register');
+
+Route::post('/add_register', 'UI\HomeController@add_register');
+
+Route::post('/check_login', 'UI\HomeController@login');
