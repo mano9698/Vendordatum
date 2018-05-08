@@ -56,7 +56,7 @@
                                                 
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                     <hr>
-                                                    <h4>New Supplier?<a class="tg-register" href="javascript:void(0);"> Click here to register</a></h4>
+                                                    <h4>New Supplier?<a class="tg-register" href="/register"> Click here to register</a></h4>
                                                 </div>
                                                 
                                             </fieldset>

@@ -6,7 +6,7 @@
 
                                 <div class="dropdown tg-themedropdown tg-userdropdown">
                                     <a href="javascript:void(0);" id="tg-adminnav" class="tg-btndropdown" data-toggle="dropdown">
-                                        <span class="tg-userdp"><img src="images/author/img-01.jpg" alt="image description"></span>
+                                        <span class="tg-userdp"><img src="assets/images/author/img-01.jpg" alt="image description"></span>
                                         <span class="tg-name">Hi! Angelena</span>
                                         <span class="tg-role">Administrator</span>
                                     </a>
@@ -72,7 +72,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <strong class="tg-logo"><a href="index-2.html"><img src="images/logo.png" alt="company logo here"></a></strong>
+                                <strong class="tg-logo"><a href="index-2.html"><img src="assets/images/logo.png" alt="company logo here"></a></strong>
                                 <a class="tg-btn" href="dashboard-postanad.html">
                                     <i class="icon-bookmark"></i>
                                     <span>post an ad</span>
