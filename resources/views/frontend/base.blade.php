@@ -21,8 +21,11 @@
         <link rel="stylesheet" href="assets/css/scrollbar.css">
         <link rel="stylesheet" href="assets/css/chartist.css">
         <link rel="stylesheet" href="assets/css/main.css">
+        @yield('additional_css')
         <link rel="stylesheet" href="assets/css/color.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/dbresponsive.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body class="tg-home tg-homeone">
@@ -112,23 +115,29 @@
         <script src="assets/js/vendor/jquery-library.js"></script>
         <script src="assets/js/vendor/bootstrap.min.js"></script>
         <script src="http://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
-        <script src="assets/js/tinymce/tinymce.min4bb5.js?apiKey=4cuu2crphif3fuls3yb1pe4qrun9pkq99vltezv2lv6sogci"></script>
+         <script src="assets/js/tinymce/tinymce.min4bb5.js?apiKey=4cuu2crphif3fuls3yb1pe4qrun9pkq99vltezv2lv6sogci"></script>
         <script src="assets/js/jquery.flagstrap.min.js"></script>
         <script src="assets/js/backgroundstretch.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/jquery.vide.min.js"></script>
         <script src="assets/js/jquery.collapse.js"></script>
         <script src="assets/js/scrollbar.min.js"></script>
+        <script src="assets/js/chartist.min.html"></script>
         <script src="assets/js/prettyPhoto.js"></script>
         <script src="assets/js/jquery-ui.js"></script>
         <script src="assets/js/countTo.js"></script>
         <script src="assets/js/appear.js"></script>
         <script src="assets/js/gmap3.js"></script>
         <script src="assets/js/main.js"></script>
+<!--        Notify Start-->
+        <script src="http://bootstrap-notify.remabledesigns.com/js/bootstrap-notify.min.js"></script>
+<!--End-->
         
         <!--        Custom JS Start-->
         <script src="assets/js/custom/forget_password.js"></script>
         <script src="assets/js/custom/register.js"></script>
+        <script src="assets/js/custom/authendication.js"></script>
+        <script src="assets/js/custom/ads.js"></script>
 <!--End-->
     </body>
 

@@ -11,7 +11,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="supplier_login">
                         <div class="tg-logingarea">
                             <h2 class="text-center">Supplier Registration</h2>
-                            <form class="tg-formtheme tg-formloging" method="POST">
+                            <form class="tg-formtheme tg-formloging" method="POST" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="supplier_login">
 
@@ -95,7 +95,7 @@
                                         <div class="input-group">
                                             <span class="input-group-btn">
                                                 <span class="btn btn-default btn-file">
-                                                    <input type="file" id="imgInp">
+                                                    <input type="file" name="file_img" id="file_img">
                                                 </span>
                                             </span>
 

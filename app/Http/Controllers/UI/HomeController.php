@@ -10,9 +10,14 @@ use Validator;
 use Response;
 use View;
 use Auth;
+use Session;
 
 class HomeController extends Controller
 {
+    public function index(){
+        return view('frontend/contents/home');
+    }
+    
     public function show_register(){
         return view('frontend/contents/register');
     }
@@ -34,6 +39,14 @@ class HomeController extends Controller
         $register->job_title = $request->job_title;
         $register->contact_number = $request->contact_number;
         $register->cmpny_business_name = $request->cmpny_business_name;
+        if($request->hasFile('file_img')){
+            $image = $request->file('file_img');
+            $path = public_path(). '/images';
+            $filename = time(). '.' . $image->getClientOriginalExtension();
+            $image->move($path, $filename);
+            $register->file = $request->image = $filename;
+        }
+//        $register->file = $request->file('file_img')->store('file_img');
         
         $insert_user = $register->save();
         if($insert_user){
@@ -51,12 +64,21 @@ class HomeController extends Controller
     }
     
     public function login(Request $request){
-        $email = $request->email;
-        $password = $request->password;
+        $email = $request->supplier_name;
+        $password = $request->supplier_password;
         if(Auth::attempt(['email_id' => $email, 'password' => $password])){
-            return "success";
+//            Session::push('email', $email);
+//            $items = Session::get('email');
+            return response()->json(array(
+                    "error"=>FALSE,
+                    "message" => "Success"
+            ));
+            
         }else{
-            return "failed";
+            return response()->json(array(
+                    "error"=>TRUE,
+                    "message" => "Failed"
+            ));
         }
     }
     

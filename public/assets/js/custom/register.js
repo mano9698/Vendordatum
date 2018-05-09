@@ -23,7 +23,7 @@ $(document).on("click", "#add_user", function () {
     var job_title = $('#job_title').val();
     var contact_number = $('#contact_number').val();
     var cmpny_business_name = $('#cmpny_business_name').val();
-    var token = $('input[name=_token]').val();
+    var file_img = $('#file_img').val();
 
     var register_data = new FormData();
 
@@ -42,6 +42,7 @@ $(document).on("click", "#add_user", function () {
     register_data.append('job_title', job_title);
     register_data.append('contact_number', contact_number);
     register_data.append('cmpny_business_name', cmpny_business_name);
+    register_data.append('file_img', $('#file_img')[0].files[0]);
 
     $.ajax({
         headers: {

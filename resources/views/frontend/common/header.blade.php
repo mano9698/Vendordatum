@@ -73,7 +73,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <strong class="tg-logo"><a href="index-2.html"><img src="assets/images/logo.png" alt="company logo here"></a></strong>
-                                <a class="tg-btn" href="dashboard-postanad.html">
+                                <a class="tg-btn" href="/add_post">
                                     <i class="icon-bookmark"></i>
                                     <span>post an ad</span>
                                 </a>
@@ -143,3 +143,5 @@
                     </div>
                 </div>
             </header>
+
+@include('frontend/common/dashboard_header')

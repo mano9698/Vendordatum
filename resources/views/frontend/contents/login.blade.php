@@ -16,16 +16,16 @@
                                      <div class="tg-logingarea">
                                          <h2 class="text-center">Login Now</h2>
                                         <h2 class="text-center">Supplier</h2>
-                                        <form class="tg-formtheme tg-formloging" action="/check_login" method="post">
+                                        <form class="tg-formtheme tg-formloging" method="post">
                                             {{csrf_field()}}
                                             <fieldset>
                                                 <div class="form-group tg-inputwithicon">
                                                     <i class="icon-envelope"></i>
-                                                    <input type="text" name="email" class="form-control" placeholder="Username">
+                                                    <input type="text" name="email" id="supplier_name" class="form-control" placeholder="Username">
                                                 </div>
                                                 <div class="form-group tg-inputwithicon">
                                                     <i class="icon-lock"></i>
-                                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                                    <input type="password" name="password" id="supplier_password" class="form-control" placeholder="Password">
                                                 </div>
                                                 <div class="form-group">
 <!--                                                    <div class="tg-checkbox">
@@ -35,7 +35,7 @@
 <a class="tg-forgetpassword" id="forget_password" href="javascript:void(0);">Forgot Password?</a>
                                                 </div>
                                                 <div class="text-center">
-                                                    <button class="tg-btn" type="submit">Login</button>
+                                                    <button class="tg-btn" id="login_supplier" type="button">Login</button>
                                                 </div>
                                                 <label class="text-center">Or</label>
                                                 <div class="col-md-1 col-lg-1">

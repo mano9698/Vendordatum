@@ -4538,4 +4538,10 @@ line-height: 20px;
 .tg-logo a, .tg-logo a img {
     width: 50%;
 }
+.tg-checkbox {
+    float: none!important;
+}
+.checkbox-pad-bottom{
+    padding-bottom: 10px!important;
+}
 /*END*/
