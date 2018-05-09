@@ -4544,4 +4544,7 @@ line-height: 20px;
 .checkbox-pad-bottom{
     padding-bottom: 10px!important;
 }
+input[type="file"].tg-product_pic {
+    display: none;
+}
 /*END*/

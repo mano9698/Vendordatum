@@ -23,7 +23,7 @@
 		overflow: hidden;
 		position: relative;
 	}
-	.tg-wrapper { padding-left: 60px; }
+	.tg-wrapper { padding-left: 0px; }
 	.tg-wrapper .tg-sidebarwrapper { width: 60px; }
 	.tg-sidebarwrapper .tg-logo{ margin: 0 0 0 60px; }
 	.tg-user{

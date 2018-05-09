@@ -26,9 +26,9 @@ class AdsController extends Controller
         $post->description = $request->description;
         $post->availability = $request->availability;
         $post->price = $request->price;
-        if($request->hasFile('file_img')){
-            $image = $request->file('file_img');
-            $path = public_path(). '/images';
+        if($request->hasFile('product_pic')){
+            $image = $request->file('product_pic');
+            $path = public_path(). '/product_images';
             $filename = time(). '.' . $image->getClientOriginalExtension();
             $image->move($path, $filename);
             $post->product_pic = $request->product_pic = $filename;

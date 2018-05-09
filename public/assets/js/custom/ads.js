@@ -26,10 +26,10 @@ $(document).on("click", "#add_posts", function () {
     var description = $('#description').val();
     var availability = $('#availability').val();
     var price = $('#price').val();
-    var file_img = $('#tg-photogallery').val();
+    var product_pic = $('#product_pic').val();
     var product_doc = $('#tg-photogallery').val();
-    alert(file_img);
-    exit;
+//    alert(product_doc);
+//    exit;
     var ads_data = new FormData();
 
     ads_data.append('title', title);
@@ -38,7 +38,7 @@ $(document).on("click", "#add_posts", function () {
     ads_data.append('description', description);
     ads_data.append('availability', availability);
     ads_data.append('price', price);
-    ads_data.append('file_img', $('#file_img')[0].files[0]);
+    ads_data.append('product_pic', $('#product_pic')[0].files[0]);
     ads_data.append('product_doc', $('#tg-photogallery')[0].files[0]);
 
     $.ajax({
