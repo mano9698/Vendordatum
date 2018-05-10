@@ -61,3 +61,28 @@ $(document).on("click", "#add_posts", function () {
     });
     return false;
 });
+
+
+$(document).ready(function(){
+//   alert('work');
+//   exit;
+    $('#search_product').autocomplete({
+        source: function(request, response){
+            $.ajax({
+               url: '/ajax_product',
+               dataType:'JSON',
+               data:{
+                   query:request.query
+               },
+               success: function(data){
+                   response(data);
+               }
+            });
+        }
+    });
+});
+
+$('#detect_location').on('click', function() {
+    $('#fetch_location').geolocate();
+});
+

@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 HOME_URL = '/';
-
+$.ajaxSetup({
+    headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        } 
+});
 $(document).on("click", "#add_user", function () {
 //   alert("register") ;
 //   return false;
@@ -16,7 +20,7 @@ $(document).on("click", "#add_user", function () {
     var mobile = $('#mobile').val();
     var alter_mobile = $('#alter_mobile').val();
     var company_name = $('#company_name').val();
-    var company_location = $('#company_location').val();
+    var company_location = $('#fetch_location').val();
     var products = $('#products').val();
     var industry = $('#industry').val();
     var business_name = $('#business_name').val();
@@ -45,9 +49,6 @@ $(document).on("click", "#add_user", function () {
     register_data.append('file_img', $('#file_img')[0].files[0]);
 
     $.ajax({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
         url: '/add_register',
         type: 'POST',
         dataType: 'JSON',
@@ -63,6 +64,58 @@ $(document).on("click", "#add_user", function () {
                 alert(data.message);
                 return false;
             }
+        }
+    });
+    return false;
+});
+
+$(document).on("click", "#update_user", function () {
+//   alert("register") ;
+//   return false;
+    var id = $('#user_id').val();
+    var first_name = $('#first_name').val();
+    var last_name = $('#last_name').val();
+    var email = $('#email').val();
+    var designation = $('#desgination').val();
+    var mobile = $('#mobile').val();
+    var alter_mobile = $('#alter_mobile').val();
+    var company_name = $('#company_name').val();
+    var company_location = $('#fetch_location').val();
+    var products = $('#products').val();
+    var industry = $('#industry').val();
+    
+    
+    var update_data = new FormData();
+    
+    update_data.append('id', id);
+    update_data.append('first_name', first_name);
+    update_data.append('last_name', last_name);
+    update_data.append('email_id', email);
+    update_data.append('desgination', designation);
+    update_data.append('mobile', mobile);
+    update_data.append('alter_mobile', alter_mobile);
+    update_data.append('company_name', company_name);
+    update_data.append('company_location', company_location);
+    update_data.append('products', products);
+    update_data.append('industry', industry);
+//    alert(industry);
+//    return false;
+    $.ajax({
+        url: '/update_profile/'+id,
+        type: 'PUT',
+        dataType: 'JSON',
+        data: update_data,
+        processData: false,
+        contentType: false,
+        success: function (data) {
+                alert(JSON.stringify(data));
+//            if (data.error) {
+//                alert('error');
+//                return false;
+//            } else {
+//                alert(data.message);
+//                return false;
+//            }
         }
     });
     return false;

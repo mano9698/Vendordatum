@@ -58,7 +58,8 @@
                                         </div>
                                         <div class="form-group tg-inputwithicon">
                                             <i class="fa fa-crosshairs"></i>
-                                            <input type="text" name="company_location" id="company_location" class="form-control" placeholder="Company location">
+                                            <a class="tg-btnsharelocation fa fa-crosshairs" id="detect_location" href="javascript:void(0);"></a>
+                                                    <input type="text" id="fetch_location" name="yourlocation" class="form-control" placeholder="Your Location">
                                         </div>
                                         <div class="form-group tg-inputwithicon">
                                             <i class="icon-user"></i>

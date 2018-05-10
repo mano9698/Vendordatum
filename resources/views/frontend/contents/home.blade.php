@@ -16,12 +16,12 @@
                                             <fieldset>
                                                 <div class="form-group tg-inputwithicon">
                                                     <i class="icon-bullhorn"></i>
-                                                    <input type="text" name="customword" class="form-control" placeholder="What are you looking for">
+                                                    <input type="text" name="customword" class="form-control" id="search_product" placeholder="What are you looking for">
                                                 </div>
                                                 <div class="form-group tg-inputwithicon">
                                                     <i class="icon-location"></i>
-                                                    <a class="tg-btnsharelocation fa fa-crosshairs" href="javascript:void(0);"></a>
-                                                    <input type="text" name="yourlocation" class="form-control" placeholder="Your Location">
+                                                    <a class="tg-btnsharelocation fa fa-crosshairs" id="detect_location" href="javascript:void(0);"></a>
+                                                    <input type="text" id="fetch_location" name="yourlocation" class="form-control" placeholder="Your Location">
                                                 </div>
                                                 <div class="form-group tg-inputwithicon">
                                                     <i class="icon-layers"></i>
@@ -148,7 +148,8 @@
                                                     <i class="icon-phone-handset"></i>
                                                     <span data-toggle="tooltip" data-placement="top" title="Show Phone No." data-last="0800 - 1234 - 562 - 6"><em>Show Phone No.</em></span>
                                                 </a>
-                                                <span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
+                                                <span class="tg-like"><i class="fa fa-heart"></i></span>
+                                                
                                             </div>
                                         </div>
                                     </div>

@@ -26,7 +26,9 @@
         <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="stylesheet" href="assets/css/dbresponsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+        <link href="http://demo.expertphp.in/css/jquery.ui.autocomplete.css" rel="stylesheet">
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
     </head>
     <body class="tg-home tg-homeone">
         <div id="tg-wrapper" class="tg-wrapper tg-haslayout">
@@ -112,33 +114,48 @@
         <!--************************************
                         Theme Modal Box End
         *************************************-->
+<!--        <script src="http://demo.expertphp.in/js/jquery.js"></script>-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="http://demo.expertphp.in/js/jquery-ui.min.js"></script>
         <script src="assets/js/vendor/jquery-library.js"></script>
         <script src="assets/js/vendor/bootstrap.min.js"></script>
-        <script src="http://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
-         <script src="assets/js/tinymce/tinymce.min4bb5.js?apiKey=4cuu2crphif3fuls3yb1pe4qrun9pkq99vltezv2lv6sogci"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQGXPTnUyBYyQQt3v0NTkihsR1WU-1Tr8"></script>
+        <script src="assets/js/tinymce/tinymce.min4bb5.js?apiKey=4cuu2crphif3fuls3yb1pe4qrun9pkq99vltezv2lv6sogci"></script>
         <script src="assets/js/jquery.flagstrap.min.js"></script>
         <script src="assets/js/backgroundstretch.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/jquery.vide.min.js"></script>
         <script src="assets/js/jquery.collapse.js"></script>
         <script src="assets/js/scrollbar.min.js"></script>
-        <script src="assets/js/chartist.min.html"></script>
+<!--        <script src="assets/js/chartist.min.html"></script>-->
         <script src="assets/js/prettyPhoto.js"></script>
         <script src="assets/js/jquery-ui.js"></script>
         <script src="assets/js/countTo.js"></script>
         <script src="assets/js/appear.js"></script>
         <script src="assets/js/gmap3.js"></script>
         <script src="assets/js/main.js"></script>
-<!--        Notify Start-->
+        <script>
+$(function() {
+    
+  $(".heart").on("click", function() {
+    $(this).toggleClass("heart-blast");
+  });
+}); 
+    
+</script>   
+        <!--        Notify Start-->
         <script src="http://bootstrap-notify.remabledesigns.com/js/bootstrap-notify.min.js"></script>
-<!--End-->
-        
+        <!--End-->
+       
+<!--<script src="https://richardcornish.github.io/jquery-geolocate/js/jquery.min.js"></script>
+--><script src="https://richardcornish.github.io/jquery-geolocate/js/jquery-geolocate.min.js"></script>
+    
         <!--        Custom JS Start-->
         <script src="assets/js/custom/forget_password.js"></script>
         <script src="assets/js/custom/register.js"></script>
         <script src="assets/js/custom/authendication.js"></script>
         <script src="assets/js/custom/ads.js"></script>
-<!--End-->
+        <!--End-->
     </body>
 
 </html>

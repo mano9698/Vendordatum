@@ -106,7 +106,7 @@
                                 <a href="javascript:void(0);"><img src="assets/images/author/img-07.jpg" alt="image description"></a>
                             </figure>
                             <div class="tg-usercontent">
-                                <h3>Hi! Angelena</h3>
+                                <h3>Hi! {{ Session::get('email') }}</h3>
                                 <h4>Administrator</h4>
                             </div>
                             <a class="tg-btnedit" href="javascript:void(0);"><i class="icon-pencil"></i></a>
@@ -114,15 +114,15 @@
                         <nav id="tg-navdashboard" class="tg-navdashboard">
                             <ul>
                                 <li>
-                                    <a href="dashboard.html">
-                                        <i class="icon-chart-bars"></i>
-                                        <span> Insights</span>
+                                    <a href="/profile">
+                                        <i class="icon-cog"></i>
+                                        <span>Profile Settings</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="dashboard-profile-setting.html">
-                                        <i class="icon-cog"></i>
-                                        <span>Profile Settings</span>
+                                    <a href="/profile">
+                                        <i class="icon-lock"></i>
+                                        <span>Change Password</span>
                                     </a>
                                 </li>
                                 <li class="menu-item-has-children">
@@ -132,41 +132,15 @@
                                     </a>
                                     <ul class="sub-menu">
                                         <li><a href="dashboard-myads.html">All Ads</a></li>
-                                        <li><a href="dashboard-myads.html">Featured Ads</a></li>
-                                        <li><a href="dashboard-myads.html">Active Ads</a></li>
                                         <li><a href="dashboard-myads.html">Inactive Ads</a></li>
                                         <li><a href="dashboard-myads.html">Sold Ads</a></li>
                                         <li><a href="dashboard-myads.html">Expired Ads</a></li>
-                                        <li><a href="dashboard-myads.html">Deleted Ads</a></li>
                                     </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="javascript:void(0);">
-                                        <i class="icon-envelope"></i>
-                                        <span>Offers/Messages</span>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li><a href="dashboard-offermessages.html">Offer Received</a></li>
-                                        <li><a href="dashboard-offermessages.html">Offer Sent</a></li>
-                                        <li><a href="dashboard-offermessages.html">Trash</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="dashboard-payments.html">
-                                        <i class="icon-cart"></i>
-                                        <span>Payments</span>
-                                    </a>
                                 </li>
                                 <li>
                                     <a href="dashboard-myfavourites.html">
                                         <i class="icon-heart"></i>
                                         <span>My Favourites</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="dashboard-profile-setting.html">
-                                        <i class="icon-star"></i>
-                                        <span>Privacy Settings</span>
                                     </a>
                                 </li>
                                 <li>
@@ -186,8 +160,8 @@
                                 <li class="tg-rss"><a href="javascript:void(0);"><i class="fa fa-rss"></i></a></li>
                             </ul>
                             <ul class="tg-appstoreicons">
-                                <li><a href="javascript:void"><img src="images/icons/app-01.png" alt="image description"></a></li>
-                                <li><a href="javascript:void"><img src="images/icons/app-02.png" alt="image description"></a></li>
+                                <li><a href="javascript:void"><img src="assets/images/icons/app-01.png" alt="image description"></a></li>
+                                <li><a href="javascript:void"><img src="assets/images/icons/app-02.png" alt="image description"></a></li>
                             </ul>
                         </div>
                     </div>

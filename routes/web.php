@@ -28,3 +28,9 @@ Route::post('/check_login', 'UI\HomeController@login');
 Route::get('/add_post', 'UI\AdsController@show_post');
 
 Route::post('/store_post' , 'UI\AdsController@add_post');
+
+Route::get('/ajax_product', 'UI\HomeController@ajax_product');
+
+Route::get('/profile', 'UI\ProfileController@profile');
+
+Route::put('/update_profile/{id}', 'UI\ProfileController@update_profile');

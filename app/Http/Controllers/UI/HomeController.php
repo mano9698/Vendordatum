@@ -5,6 +5,7 @@ namespace App\Http\Controllers\UI;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\UI\Register;
+use App\Model\UI\Products;
 use Illuminate\Support\Facades\Input;
 use Validator;
 use Response;
@@ -66,12 +67,14 @@ class HomeController extends Controller
     public function login(Request $request){
         $email = $request->supplier_name;
         $password = $request->supplier_password;
+        $user_id = Auth::user()->id;
         if(Auth::attempt(['email_id' => $email, 'password' => $password])){
-//            Session::push('email', $email);
-//            $items = Session::get('email');
+        Session::put('email', $user_id); 
+            $items = Session::get('email');
             return response()->json(array(
                     "error"=>FALSE,
-                    "message" => "Success"
+                    "message" => "Success",
+                    "sess" =>$items
             ));
             
         }else{
@@ -81,5 +84,14 @@ class HomeController extends Controller
             ));
         }
     }
+    
+    public function ajax_product(Request $request){
+        $query = $request->get('query','');
+        $products = Products::where('product_name','LIKE','%'.$query.'%')->get();
+        return response()->json($products);
+    }
+    
+   
+    
     
 }

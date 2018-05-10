@@ -32,7 +32,7 @@ $(document).on("click", "#login_supplier", function(){
                     return false;
                 }else{
                     success_msg(data.message);
-//                    window.location.href="/add_post";
+//                    window.location.href="/profile";
                     return false;
                 }
             }
