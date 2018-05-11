@@ -120,7 +120,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/profile">
+                                    <a href="/change_password">
                                         <i class="icon-lock"></i>
                                         <span>Change Password</span>
                                     </a>
@@ -131,7 +131,7 @@
                                         <span>My Ads</span>
                                     </a>
                                     <ul class="sub-menu">
-                                        <li><a href="dashboard-myads.html">All Ads</a></li>
+                                        <li><a href="/my_ads">All Ads</a></li>
                                         <li><a href="dashboard-myads.html">Inactive Ads</a></li>
                                         <li><a href="dashboard-myads.html">Sold Ads</a></li>
                                         <li><a href="dashboard-myads.html">Expired Ads</a></li>

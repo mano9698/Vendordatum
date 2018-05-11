@@ -155,6 +155,7 @@ $(function() {
         <script src="assets/js/custom/register.js"></script>
         <script src="assets/js/custom/authendication.js"></script>
         <script src="assets/js/custom/ads.js"></script>
+        <script src="assets/js/custom/profile.js"></script>
         <!--End-->
     </body>
 
