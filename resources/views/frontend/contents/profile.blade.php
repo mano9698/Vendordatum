@@ -27,8 +27,7 @@
                             <div class="tg-dashboardboxtitle">
                                 <h2>Profile Detail</h2>
                             </div>
-                            <form class="tg-formtheme tg-formloging" method="PUT" enctype="multipart/form-data">
-                                {{  csrf_field() }}
+                            <form class="tg-formtheme tg-formloging" method="POST" enctype="multipart/form-data">
                             <div class="tg-dashboardholder">
                                 <fieldset>
                                 <div class="form-group tg-inputwithicon">

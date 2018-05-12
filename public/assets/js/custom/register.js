@@ -102,8 +102,7 @@ $(document).on("click", "#update_user", function () {
 //    return false;
     $.ajax({
         url: '/update_profile/'+id,
-        type: 'PUT',
-        dataType: 'JSON',
+        type: 'POST',
         data: update_data,
         processData: false,
         contentType: false,

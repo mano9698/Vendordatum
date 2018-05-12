@@ -52,12 +52,6 @@
                                 <table id="tg-adstype" class="table tg-dashboardtable tg-tablemyads">
                                     <thead>
                                         <tr>
-                                            <th>
-                                                <span class="tg-checkbox">
-                                                    <input id="tg-checkedall" type="checkbox" name="myads" value="checkall">
-                                                    <label for="tg-checkedall"></label>
-                                                </span>
-                                            </th>
                                             <th>Photo</th>
                                             <th>Title</th>
                                             <th>Product Name</th>
@@ -72,27 +66,26 @@
                                     <tbody>
                                         @foreach($get_products as $products)
                                         <tr data-category="active">
-                                            <td data-title="">
-                                                <span class="tg-checkbox">
-                                                    <input id="tg-adone" type="checkbox" name="myads" value="myadone">
-                                                    <label for="tg-adone"></label>
-                                                </span>
-                                            </td>
                                             <td data-title="Photo"><img src="product_images/{{ $products->product_pic }}"></td>
                                             <td data-title="Title">
-                                                <h3>{{ $get_products['title'] }}</h3>
+                                                <h3>{{ $products->title }}</h3>
                                                 <span>Ad ID: ng3D5hAMHPajQrM</span>
                                             </td>
-                                            <td data-title="Category"><span class="tg-adcategories"></span></td>
-                                            <td data-title="Featured">Yes</td>
+                                            <td data-title="Category"><span class="tg-adcategories">{{ $products->product_name }}</span></td>
+                                            <td data-title="Featured">{{ $products->product_id }}</td>
+                                            <td data-title="Ad Status">{{ $products->description }}</td>
+                                            @if($products->availability == 1)
                                             <td data-title="Ad Status"><span class="tg-adstatus tg-adstatusactive">active</span></td>
+                                            @else
+                                            <td data-title="Ad Status"><span class="tg-adstatus tg-adstatusdeleted">In active</span></td>
+                                            @endif
                                             <td data-title="Price &amp; Location">
-                                                <h3>$200</h3>
+                                                <h3>{{ $products->price }} </h3>
                                                 <address>location  44-46 Morningside North Road Edinburgh, Scotland, EH10 4BF</address>
                                             </td>
                                             <td data-title="Date">
-                                                <time datetime="2017-08-08">Jun 27, 2017</time>
-                                                <span>Published</span>
+                                                <time datetime="2017-08-08">{{ $products->created_at }}</time>
+<!--                                                <span>Published</span>-->
                                             </td>
                                             <td data-title="Action">
                                                 <div class="tg-btnsactions">

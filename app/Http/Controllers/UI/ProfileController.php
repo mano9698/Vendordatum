@@ -45,7 +45,8 @@ class ProfileController extends Controller {
         $profile_data->cmpny_location = $request->company_location;
         $profile_data->products = $request->products;
         $profile_data->industry = $request->industry;
-
+        
+//        return $request->all();
         $update_data = $profile_data->save();
 //        return $profile_data;
 
@@ -61,23 +62,6 @@ class ProfileController extends Controller {
             ));
         }
 
-//        try {
-//            $category = Register::findOrNew($id);
-//            $category->update($request->all());
-//            if ($category) {
-//                return response()->json(array(
-//                            "error" => FALSE,
-//                            "message" => "Update Successfully"
-//                ));
-//            } else {
-//                return response()->json(array(
-//                            "error" => TRUE,
-//                            "message" => "Update Failed"
-//                ));
-//            }
-//        } catch (Exception $e) {
-//            return $request->messages();
-//        }
     }
 
     public function update_password(Request $request,$id) {
@@ -106,12 +90,17 @@ class ProfileController extends Controller {
         }
     }
 
-    public function my_ads(Request $request) {
-        $id = Session::get('email');
+    public function my_ads() {
+        try{
+            $id = Session::get('email');
 //        $get_products = Products::find('user_id', $id);
         $get_products = Products::where('user_id', $id)->get();
 //        return $get_products;
         return view('frontend.contents.my_ads')->with('get_products', $get_products);
+        } catch (Exception $ex) {
+            return $request->message();
+        }
+        
     }
 
 }
