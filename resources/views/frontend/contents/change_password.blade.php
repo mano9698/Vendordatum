@@ -15,9 +15,9 @@
     <!--************************************
                     Section Start
     *************************************-->
-    <section class="tg-dbsectionspace tg-haslayout">
+    <section class="tg-dbsectionspace tg-haslayout" >
         <div class="row">
-            <form class="tg-formtheme tg-formdashboard">
+            <div class="tg-formtheme tg-formdashboard">
                 <fieldset>
                     <!--************************************
                                     Approved Ads Start
@@ -27,28 +27,22 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 tg-lgcolwidthhalf">
-                        <div class="tg-dashboardbox">
+                        <div class="tg-dashboardbox" id="update_password_form">
                             <div class="tg-dashboardboxtitle">
                                 <h2>Change Password</h2>
                             </div>
-                            <form class="tg-formtheme tg-formloging" method="POST">
-<!--                                {{  csrf_field() }}-->
+                            <form class="tg-formtheme tg-formloging" method="post">
+                               
                                 <div class="tg-dashboardholder">
                                     <fieldset>
                                         <div class="form-group tg-inputwithicon">
-                                            <input type="hidden" class="form-control" id="user_id" value="{{ $get_user->id }}">
+                                            <input type="hidden" class="form-control" name="user_id" id="user_id" value="{{ $get_user->id }}">
 
-                                            <input type="text" name="password" id="password" class="form-control" placeholder="Old password" value="">
+                                            <input type="text" name="password_field" id="password_field" class="form-control" placeholder="Old password" value="">
                                         </div>
-<!--                                        <div class="form-group tg-inputwithicon">
-                                            <input type="text" name="text" id="new_password" class="form-control" placeholder="New password" value="">
-                                        </div>
-                                        <div class="form-group tg-inputwithicon">
-                                            <input type="text" name="text" id="verify_password" class="form-control" placeholder="Confirm password" value="">-->
-<!--                                        </div>-->
                                         
                                     </fieldset>
-                                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+<!--                                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">-->
                                     <button class="tg-btn" id="update_password" type="button">Update</button>
                                 </div>
                             </form>
@@ -69,7 +63,7 @@
                                     Approved Ads End
                     *************************************-->
                 </fieldset>
-            </form>
+            </div>
         </div>
     </section>
     <!--************************************

@@ -48,6 +48,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @if($get_products)
                                 <table id="tg-adstype" class="table tg-dashboardtable tg-tablemyads">
                                     <thead>
                                         <tr>
@@ -69,6 +70,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($get_products as $products)
                                         <tr data-category="active">
                                             <td data-title="">
                                                 <span class="tg-checkbox">
@@ -76,12 +78,12 @@
                                                     <label for="tg-adone"></label>
                                                 </span>
                                             </td>
-                                            <td data-title="Photo"><img src="assets/images/thumbnail/{{ $get_products['product_pic'] }}"></td>
+                                            <td data-title="Photo"><img src="product_images/{{ $products->product_pic }}"></td>
                                             <td data-title="Title">
                                                 <h3>{{ $get_products['title'] }}</h3>
                                                 <span>Ad ID: ng3D5hAMHPajQrM</span>
                                             </td>
-                                            <td data-title="Category"><span class="tg-adcategories">{{ $get_products['title'] }}</span></td>
+                                            <td data-title="Category"><span class="tg-adcategories"></span></td>
                                             <td data-title="Featured">Yes</td>
                                             <td data-title="Ad Status"><span class="tg-adstatus tg-adstatusactive">active</span></td>
                                             <td data-title="Price &amp; Location">
@@ -100,8 +102,12 @@
                                                 </div>
                                             </td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
+                                @else
+                                <h3>No Products Found</h3>
+                                @endif
                                 <nav class="tg-pagination">
                                     <ul>
                                         <li class="tg-prevpage"><a href="#"><i class="fa fa-angle-left"></i></a></li>

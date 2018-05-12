@@ -37,6 +37,6 @@ Route::put('/update_profile/{id}', 'UI\ProfileController@update_profile');
 
 Route::get('/change_password', 'UI\ProfileController@change_password');
 
-Route::post('/update_password', 'UI\ProfileController@update_password');
+Route::post('/update_password/{id}', 'UI\ProfileController@update_password');
 
 Route::get('/my_ads', 'UI\ProfileController@my_ads');

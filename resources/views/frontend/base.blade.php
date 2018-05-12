@@ -115,9 +115,9 @@
                         Theme Modal Box End
         *************************************-->
 <!--        <script src="http://demo.expertphp.in/js/jquery.js"></script>-->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://demo.expertphp.in/js/jquery-ui.min.js"></script>
-        <script src="assets/js/vendor/jquery-library.js"></script>
+<!--        <script src="assets/js/vendor/jquery-library.js"></script>-->
         <script src="assets/js/vendor/bootstrap.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQGXPTnUyBYyQQt3v0NTkihsR1WU-1Tr8"></script>
         <script src="assets/js/tinymce/tinymce.min4bb5.js?apiKey=4cuu2crphif3fuls3yb1pe4qrun9pkq99vltezv2lv6sogci"></script>
